@@ -88,7 +88,7 @@ header {
     top: 100px;
     right: 150px;
     width: 500px;
-    max-height: 1000px;
+    max-height: 700px;
     overflow-y: auto;
     background:linear-gradient(to left, var(--primary-color), var(--nav-bar-color));
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
