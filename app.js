@@ -144,7 +144,7 @@ function renderCart(){
                         <p class="price">$${product.price}</p>
                         <div class="quantity-controls">
                         <button class="decrease-quantity" data-product-id="${item.id}">-</button>
-                        <p class="quantity">Cantidad: ${item.quantity}</p>
+                        <p class="quantity">${item.quantity}</p>
                         <button class="increase-quantity" data-product-id="${item.id}">+</button>
                         <button class="remove-from-cart" data-product-id="${item.id}">Eliminar</button>
                         </div>
@@ -190,7 +190,7 @@ function increaseQuantity(event){
 
         const cartQuantityElement = cartContainer.querySelector(`[data-product-id="${productId}"]`).parentElement.parentElement.querySelector('.quantity');
             if(cartQuantityElement){
-                cartQuantityElement.textContent = `Cantidad: ${existingItem.quantity}`;
+                cartQuantityElement.textContent = `${existingItem.quantity}`;
             }
         
         renderTotalCartPrice();
@@ -224,7 +224,7 @@ function decreaseQuantity(event){
         } else {
             // Solo actualizo el texto, asi no se hace un "re-render" completo del carrito y evito molestias visuales
             const quantityElement = button_clicked.parentElement.querySelector('.quantity');
-            quantityElement.textContent = `Cantidad: ${existingItem.quantity}`;
+            quantityElement.textContent = `${existingItem.quantity}`;
         }
     }
     renderTotalCartPrice();
